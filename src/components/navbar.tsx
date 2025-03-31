@@ -5,8 +5,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import NavLink from './nav-link';
 import { ModeToggle } from './theme-toggler';
-// import { TypingAnimation } from './magicui/typing-animation';
-// import { ThemeToggleButton } from './ToggleThemeButton';
+import { TypingAnimation } from './magicui/typing-animation';
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -14,13 +13,13 @@ const Navbar = () => {
   const handleClick = () => setMenuOpen((prev) => !prev);
 
   return (
-    <nav className='fixed top-0 w-full z-40'>
+    <nav className='fixed top-0 w-full z-40 backdrop-blur-lg border-b border-white/10 shadow-lg'>
       <div className='max-w-5xl mx-auto px-4'>
         <div className='flex justify-between items-center h-16'>
           <Link href='/' className='font-mono text-xl font-bold'>
-            {/* <TypingAnimation className='text-white'> */}
-            Craig Clayton
-            {/* </TypingAnimation> */}
+            <TypingAnimation className='text-white'>
+              Craig Clayton
+            </TypingAnimation>
           </Link>
 
           {/* Desktop Links */}

@@ -98,6 +98,38 @@ const AboutPage = () => {
         </div>
       </div>
 
+      <div className='mt-6 bg-gray-800 p-6 rounded-lg shadow-lg'>
+        <h3 className='text-xl font-semibold text-blue-400'>
+          🛍️ Product Showcase
+        </h3>
+        <p className='text-gray-300 mt-2'>
+          An e-commerce product page built with Next.js, ShadCN, and Supabase,
+          featuring dynamic data fetching and modern UI.
+        </p>
+        <ul className='list-disc list-inside text-gray-400 mt-2'>
+          <li>Dynamic product details</li>
+          <li>Optimized for performance</li>
+          <li>Responsive and accessible design</li>
+        </ul>
+        <div className='mt-3'>
+          <a
+            href='https://github.com/BullDogPatch/product-shop'
+            target='_blank'
+            className='text-blue-400 hover:underline'
+          >
+            View on GitHub
+          </a>{' '}
+          |
+          <a
+            href='https://product-shop-mu.vercel.app'
+            target='_blank'
+            className='text-blue-400 hover:underline ml-2'
+          >
+            Live Demo
+          </a>
+        </div>
+      </div>
+
       <h2 className='text-2xl font-semibold mt-8 mb-2'>
         Fun Facts About Me 🎶
       </h2>

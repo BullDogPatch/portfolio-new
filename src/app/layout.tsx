@@ -5,6 +5,7 @@ import { ThemeProvider } from '@/components/theme-provider';
 import './globals.css';
 import { ModeToggle } from '@/components/theme-toggler';
 import Header from '@/components/header';
+import Footer from '@/components/footer';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -41,6 +42,7 @@ export default function RootLayout({
           <main className='flex flex-col gap-[32px] row-start-2 items-center sm:items-start'>
             {children}
           </main>
+          <Footer />
         </ThemeProvider>
       </body>
     </html>
