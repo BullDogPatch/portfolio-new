@@ -13,11 +13,11 @@ const Navbar = () => {
   const handleClick = () => setMenuOpen((prev) => !prev);
 
   return (
-    <nav className='fixed top-0 w-full z-40 backdrop-blur-lg border-b border-white/10 shadow-lg'>
+    <nav className='fixed top-0 w-full z-40 backdrop-blur-lg border-b border-white/10 shadow-lg pb-2'>
       <div className='max-w-5xl mx-auto px-4'>
         <div className='flex justify-between items-center h-16'>
           <Link href='/' className='font-mono text-xl font-bold'>
-            <TypingAnimation className='text-white'>
+            <TypingAnimation className='text-white text-md md:text-3xl'>
               Craig Clayton
             </TypingAnimation>
           </Link>
