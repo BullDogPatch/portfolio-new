@@ -27,7 +27,7 @@ const Navbar = () => {
             <NavLink
               href='/about-me'
               activeClassName='underline text-blue-500'
-              nonActiveClassName='text-gray-600 hover:text-blue-500'
+              nonActiveClassName='text-gray-800 hover:text-blue-500'
               className='px-2 py-2 rounded-md transition-all duration-200'
             >
               About Me
@@ -35,7 +35,7 @@ const Navbar = () => {
             <NavLink
               href='/contact-me'
               activeClassName='underline text-blue-500'
-              nonActiveClassName='text-gray-600 hover:text-blue-500'
+              nonActiveClassName='text-gray-800 hover:text-blue-500'
               className='px-2 py-2 rounded-md transition-all duration-200'
             >
               Contact Me
