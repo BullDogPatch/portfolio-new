@@ -86,7 +86,7 @@ const ContactForm = () => {
         <CardFooter className='flex justify-between my-4'>
           <Button
             type='submit'
-            className='w-full mt-4 p-3 font-semibold rounded-lg transition cursor-pointer'
+            className='w-full mt-4 p-4 font-bold rounded-md transition cursor-pointer'
           >
             {isSending ? 'Sending...' : 'Send Message'}
           </Button>
