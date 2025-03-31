@@ -1,6 +1,19 @@
 'use client';
 
 import { useRef, useState } from 'react';
+import { Button } from '@/components/ui/button';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from '@/components/ui/card';
+import { Input } from '@/components/ui/input';
+import { Label } from '@/components/ui/label';
+import { Textarea } from '@/components/ui/textarea';
+import { BorderBeam } from '@/components/magicui/border-beam';
 
 const ContactForm = () => {
   const formRef = useRef<HTMLFormElement>(null);
@@ -33,53 +46,48 @@ const ContactForm = () => {
   };
 
   return (
-    <div className='flex flex-col items-center w-full'>
-      <h2 className='text-2xl sm:text-3xl font-bold text-center mb-6'>
-        Contact Me
-      </h2>
-      <form
-        ref={formRef}
-        onSubmit={onSubmit}
-        className='w-full max-w-lg bg-gray-900 p-6 rounded-2xl shadow-lg space-y-4'
-      >
-        <div className='flex flex-col'>
-          <label className='text-gray-300 mb-1'>Your Name</label>
-          <input
-            type='text'
-            name='name'
-            placeholder='Enter your name...'
-            className='p-3 rounded-lg bg-gray-800 text-white placeholder-gray-500 focus:ring-2 focus:ring-blue-500 outline-none'
-            required
-          />
-        </div>
-        <div className='flex flex-col'>
-          <label className='text-gray-300 mb-1'>Your Email</label>
-          <input
-            type='email'
-            name='email'
-            placeholder='Enter your email...'
-            className='p-3 rounded-lg bg-gray-800 text-white placeholder-gray-500 focus:ring-2 focus:ring-blue-500 outline-none'
-            required
-          />
-        </div>
-        <div className='flex flex-col'>
-          <label className='text-gray-300 mb-1'>Leave a message...</label>
-          <textarea
-            rows={4}
-            name='message'
-            placeholder='Write your message here...'
-            className='p-3 rounded-lg bg-gray-800 text-white placeholder-gray-500 focus:ring-2 focus:ring-blue-500 outline-none'
-            required
-          />
-        </div>
-        <button
+    <Card className='relative overflow-hidden w-full max-w-lg p-6 rounded-2xl shadow-lg space-y-4'>
+      <CardHeader>
+        <CardTitle>Contact Me</CardTitle>
+        <CardDescription>
+          Enter your details and message in this form.
+        </CardDescription>
+      </CardHeader>
+      <CardContent>
+        <form>
+          <div className='grid w-full items-center gap-4'>
+            <div className='flex flex-col space-y-1.5'>
+              <Label htmlFor='email'>Your Name</Label>
+              <Input type='text' placeholder='Enter your name' />
+            </div>
+            <div className='flex flex-col space-y-1.5'>
+              <Label htmlFor='email'>Your Email</Label>
+              <Input type='email' placeholder='Enter your email' />
+            </div>
+            <Textarea placeholder='Type your message here.' />
+          </div>
+        </form>
+      </CardContent>
+      <CardFooter className='flex justify-between'>
+        <Button
           type='submit'
-          className='w-full mt-4 p-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition'
+          className='w-full mt-4 p-3 font-semibold rounded-lg transition cursor-pointer'
         >
           {isSending ? 'Sending...' : 'Send Message'}
-        </button>
-      </form>
-    </div>
+        </Button>
+      </CardFooter>
+      <BorderBeam
+        duration={6}
+        size={400}
+        className='from-transparent via-red-500 to-transparent'
+      />
+      <BorderBeam
+        duration={6}
+        delay={3}
+        size={400}
+        className='from-transparent via-blue-500 to-transparent'
+      />
+    </Card>
   );
 };
 
