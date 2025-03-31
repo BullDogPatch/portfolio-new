@@ -26,17 +26,17 @@ const Navbar = () => {
           <div className='hidden md:flex items-center space-x-8'>
             <NavLink
               href='/about-me'
-              activeClassName='underline text-blue-500'
+              activeClassName='text-blue-500'
               nonActiveClassName='text-gray-500 hover:text-blue-500'
-              className='px-2 py-2 rounded-md transition-all duration-200'
+              className='font-bold px-2 py-2 rounded-md transition-all duration-200'
             >
               About Me
             </NavLink>
             <NavLink
               href='/contact-me'
-              activeClassName='underline text-blue-500'
+              activeClassName='text-blue-500'
               nonActiveClassName='text-gray-500 hover:text-blue-500'
-              className='px-2 py-2 rounded-md transition-all duration-200'
+              className='font-bold px-2 py-2 rounded-md transition-all duration-200'
             >
               Contact Me
             </NavLink>
@@ -84,7 +84,7 @@ const Navbar = () => {
           <div className='px-2 pt-2 pb-3 space-y-1'>
             <NavLink
               href='/about-me'
-              activeClassName='underline text-blue-500'
+              activeClassName='text-blue-500'
               nonActiveClassName='text-gray-600 hover:text-blue-500'
               className='block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-white hover:bg-gray-500'
               handleClick={handleClick}
@@ -93,7 +93,7 @@ const Navbar = () => {
             </NavLink>
             <NavLink
               href='/contact-me'
-              activeClassName='underline text-blue-500'
+              activeClassName='text-blue-500'
               nonActiveClassName='text-gray-600 hover:text-blue-500'
               className='block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-white hover:bg-gray-500'
               handleClick={handleClick}
