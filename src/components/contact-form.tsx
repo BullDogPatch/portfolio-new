@@ -40,7 +40,6 @@ const ContactForm = () => {
     }).then((res) => res.json());
 
     if (res.success) {
-      console.log('Success', res);
       formRef.current?.reset();
 
       Swal.fire({
