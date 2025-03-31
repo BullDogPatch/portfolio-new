@@ -17,7 +17,7 @@ const Navbar = () => {
       <div className='max-w-5xl mx-auto px-4'>
         <div className='flex justify-between items-center h-16'>
           <Link href='/' className='font-mono text-xl font-bold'>
-            <TypingAnimation className='text-white text-md md:text-3xl'>
+            <TypingAnimation className='text-md md:text-3xl'>
               Craig Clayton
             </TypingAnimation>
           </Link>
