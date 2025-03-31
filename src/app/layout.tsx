@@ -3,7 +3,6 @@ import { Geist, Geist_Mono } from 'next/font/google';
 import { ThemeProvider } from '@/components/theme-provider';
 
 import './globals.css';
-import { ModeToggle } from '@/components/theme-toggler';
 import Header from '@/components/header';
 import Footer from '@/components/footer';
 
