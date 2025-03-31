@@ -48,6 +48,7 @@ const ContactForm = () => {
         text: "I'll get back to you soon.",
         icon: 'success',
         confirmButtonColor: '#3085d6',
+        theme: 'auto',
       });
     } else {
       Swal.fire({
