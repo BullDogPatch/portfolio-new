@@ -53,40 +53,46 @@ const ContactForm = () => {
           Enter your details and message in this form.
         </CardDescription>
       </CardHeader>
-      <CardContent>
-        <form>
-          <div className='grid w-full items-center gap-4'>
-            <div className='flex flex-col space-y-1.5'>
-              <Label htmlFor='email'>Your Name</Label>
-              <Input type='text' placeholder='Enter your name' />
-            </div>
-            <div className='flex flex-col space-y-1.5'>
-              <Label htmlFor='email'>Your Email</Label>
-              <Input type='email' placeholder='Enter your email' />
-            </div>
-            <Textarea placeholder='Type your message here.' />
+      <form ref={formRef} onSubmit={onSubmit}>
+        <CardContent className='grid w-full items-center gap-8'>
+          <div className='flex flex-col space-y-1.5'>
+            <Label htmlFor='name'>Your Name</Label>
+            <Input
+              type='text'
+              name='name'
+              placeholder='Enter your name'
+              required
+            />
           </div>
-        </form>
-      </CardContent>
-      <CardFooter className='flex justify-between'>
-        <Button
-          type='submit'
-          className='w-full mt-4 p-3 font-semibold rounded-lg transition cursor-pointer'
-        >
-          {isSending ? 'Sending...' : 'Send Message'}
-        </Button>
-      </CardFooter>
-      <BorderBeam
-        duration={6}
-        size={400}
-        className='from-transparent via-red-500 to-transparent'
-      />
-      <BorderBeam
-        duration={6}
-        delay={3}
-        size={400}
-        className='from-transparent via-blue-500 to-transparent'
-      />
+          <div className='flex flex-col space-y-1.5'>
+            <Label htmlFor='email'>Your Email</Label>
+            <Input
+              type='email'
+              name='email'
+              placeholder='Enter your email'
+              required
+            />
+          </div>
+          <div className='flex flex-col space-y-1.5'>
+            <Label htmlFor='message'>Your Message</Label>
+            <Textarea
+              name='message'
+              rows={8}
+              placeholder='Type your message here.'
+              required
+            />
+          </div>
+        </CardContent>
+        <CardFooter className='flex justify-between my-4'>
+          <Button
+            type='submit'
+            className='w-full mt-4 p-3 font-semibold rounded-lg transition cursor-pointer'
+          >
+            {isSending ? 'Sending...' : 'Send Message'}
+          </Button>
+        </CardFooter>
+      </form>
+      <BorderBeam duration={8} size={400} />
     </Card>
   );
 };
