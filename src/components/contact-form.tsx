@@ -33,12 +33,14 @@ const ContactForm = () => {
   };
 
   return (
-    <div className=' flex flex-col w-full text-center'>
-      <h2 className='text-2xl mb-4 font-bold'>Contact Me</h2>
+    <div className='flex flex-col items-center w-full'>
+      <h2 className='text-2xl sm:text-3xl font-bold text-center mb-6'>
+        Contact Me
+      </h2>
       <form
         ref={formRef}
         onSubmit={onSubmit}
-        className='w-full max-w-lg mx-auto bg-gray-900 p-6 rounded-2xl shadow-lg space-y-4'
+        className='w-full max-w-lg bg-gray-900 p-6 rounded-2xl shadow-lg space-y-4'
       >
         <div className='flex flex-col'>
           <label className='text-gray-300 mb-1'>Your Name</label>

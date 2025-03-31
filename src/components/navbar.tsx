@@ -86,7 +86,7 @@ const Navbar = () => {
               href='/about-me'
               activeClassName='underline text-blue-500'
               nonActiveClassName='text-gray-600 hover:text-blue-500'
-              className='block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700'
+              className='block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-white hover:bg-gray-500'
               handleClick={handleClick}
             >
               About Me
@@ -95,7 +95,7 @@ const Navbar = () => {
               href='/contact-me'
               activeClassName='underline text-blue-500'
               nonActiveClassName='text-gray-600 hover:text-blue-500'
-              className='block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700'
+              className='block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-white hover:bg-gray-500'
               handleClick={handleClick}
             >
               Contact Me

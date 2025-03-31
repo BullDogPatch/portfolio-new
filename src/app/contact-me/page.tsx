@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 const ContactPage = () => {
   return (
-    <div className='w-1/2 mx-auto h-[90vh] mt-10 flex justify-center items-center'>
+    <div className='px-8 mx-auto h-[90vh] mt-10 flex justify-center items-center'>
       <ContactForm />
     </div>
   );
