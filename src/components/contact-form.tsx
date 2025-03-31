@@ -1,5 +1,6 @@
 'use client';
 
+import Swal from 'sweetalert2';
 import { useRef, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import {
@@ -41,6 +42,20 @@ const ContactForm = () => {
     if (res.success) {
       console.log('Success', res);
       formRef.current?.reset();
+
+      Swal.fire({
+        title: 'Message Sent!',
+        text: "I'll get back to you soon.",
+        icon: 'success',
+        confirmButtonColor: '#3085d6',
+      });
+    } else {
+      Swal.fire({
+        title: 'Oops!',
+        text: 'Something went wrong. Please try again.',
+        icon: 'error',
+        confirmButtonColor: '#d33',
+      });
     }
     setIsSending(false);
   };
