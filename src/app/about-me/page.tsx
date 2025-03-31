@@ -1,3 +1,11 @@
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'About Me',
+  description:
+    'Passionate front-end developer with a focus on building fast, modern, and accessible web applications.',
+};
+
 const AboutPage = () => {
   return (
     <div className='max-w-3xl mt-10 mx-auto px-6 py-12'>
