@@ -111,8 +111,8 @@ const AboutPage = () => {
           🛍️ Product Showcase
         </h3>
         <p className='text-gray-300 mt-2'>
-          An e-commerce product page built with Next.js, ShadCN, and Supabase,
-          featuring dynamic data fetching and modern UI.
+          An e-commerce product page built with Next.js and ShadCN, featuring
+          dynamic data fetching and modern UI.
         </p>
         <ul className='list-disc list-inside text-gray-400 mt-2'>
           <li>Dynamic product details</li>
