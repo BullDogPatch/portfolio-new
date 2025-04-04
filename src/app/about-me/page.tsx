@@ -44,7 +44,10 @@ const AboutPage = () => {
       <h2 className='text-2xl font-semibold mb-2'>What I Build 🛠️</h2>
 
       {projects.map((project) => (
-        <div className='mt-6 bg-gray-800 p-6 rounded-lg shadow-lg'>
+        <div
+          key={project.title}
+          className='mt-6 bg-gray-800 p-6 rounded-lg shadow-lg'
+        >
           <h3 className='text-xl font-semibold text-blue-400'>
             {project.title}
           </h3>
