@@ -1,3 +1,4 @@
+import projects from '@/lib/project-data';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -42,132 +43,48 @@ const AboutPage = () => {
 
       <h2 className='text-2xl font-semibold mb-2'>What I Build 🛠️</h2>
 
-      <div className='bg-gray-800 p-6 rounded-lg shadow-lg mb-6'>
-        <h3 className='text-xl font-semibold text-blue-400'>
-          🍪 Cookie Clicker Game
-        </h3>
-        <p className='text-gray-300 mt-2 '>
-          A fun, interactive clicker game where users earn cookies and unlock
-          upgrades.
-        </p>
-        <ul className='list-disc list-inside text-gray-400 mt-2'>
-          <li>Dynamic animations tied to clicks</li>
-          <li>Real-time updates with cookies per second calculation</li>
-          <li>Dark mode for a sleek UI</li>
-        </ul>
-        <div className='mt-3'>
-          <a
-            href='https://github.com/BullDogPatch/week6-assignment'
-            target='_blank'
-            className='text-blue-400 hover:underline'
-          >
-            View on GitHub
-          </a>{' '}
-          |
-          <a
-            href='https://week6-assignment-cia0.onrender.com/'
-            target='_blank'
-            className='text-blue-400 hover:underline ml-2'
-          >
-            Live Demo
-          </a>
+      {projects.map((project) => (
+        <div
+          key={project.title}
+          className='mt-6 bg-gray-800 p-6 rounded-lg shadow-lg'
+        >
+          <h3 className='text-xl font-semibold text-blue-400'>
+            {project.title}
+          </h3>
+          <p className='text-gray-300 mt-2'>{project.description}</p>
+          <ul className='list-disc list-inside text-gray-400 mt-2 mb-4'>
+            {project.features.map((feature) => (
+              <li key={feature}>{feature}</li>
+            ))}
+          </ul>
+          {project.tech.map((t) => (
+            <span
+              key={t}
+              className='m-1 p-1 bg-gray-500 rounded-md text-sm font-bold'
+            >
+              {t}
+            </span>
+          ))}
+          <div className='mt-3'>
+            <a
+              href={project.github}
+              target='_blank'
+              rel='noopener noreferrer'
+              className='text-blue-400 hover:underline'
+            >
+              View on GitHub
+            </a>{' '}
+            |
+            <a
+              href={project.liveDemo}
+              target='_blank'
+              className='text-blue-400 hover:underline ml-2'
+            >
+              Live Demo
+            </a>
+          </div>
         </div>
-      </div>
-
-      <div className='bg-gray-800 p-6 rounded-lg shadow-lg'>
-        <h3 className='text-xl font-semibold text-blue-400'>
-          🎸 Band Review App
-        </h3>
-        <p className='text-gray-300 mt-2'>
-          A platform where users share concert reviews, built with Next.js and
-          Supabase.
-        </p>
-        <ul className='list-disc list-inside text-gray-400 mt-2'>
-          <li>User-generated content</li>
-          <li>Fast, server-side rendering</li>
-          <li>Mobile-friendly design</li>
-        </ul>
-        <div className='mt-3'>
-          <a
-            href='https://github.com/BullDogPatch/week7-assignment'
-            target='_blank'
-            className='text-blue-400 hover:underline'
-          >
-            View on GitHub
-          </a>{' '}
-          |
-          <a
-            href='https://week7-assignment-gj2c.vercel.app'
-            target='_blank'
-            className='text-blue-400 hover:underline ml-2'
-          >
-            Live Demo
-          </a>
-        </div>
-      </div>
-
-      <div className='mt-6 bg-gray-800 p-6 rounded-lg shadow-lg'>
-        <h3 className='text-xl font-semibold text-blue-400'>
-          🛍️ Product Showcase
-        </h3>
-        <p className='text-gray-300 mt-2'>
-          An e-commerce product page built with Next.js and ShadCN, featuring
-          dynamic data fetching and modern UI.
-        </p>
-        <ul className='list-disc list-inside text-gray-400 mt-2'>
-          <li>Dynamic product details</li>
-          <li>Optimized for performance</li>
-          <li>Responsive and accessible design</li>
-        </ul>
-        <div className='mt-3'>
-          <a
-            href='https://github.com/BullDogPatch/product-shop'
-            target='_blank'
-            className='text-blue-400 hover:underline'
-          >
-            View on GitHub
-          </a>{' '}
-          |
-          <a
-            href='https://product-shop-mu.vercel.app'
-            target='_blank'
-            className='text-blue-400 hover:underline ml-2'
-          >
-            Live Demo
-          </a>
-        </div>
-      </div>
-
-      <div className='mt-6 bg-gray-800 p-6 rounded-lg shadow-lg'>
-        <h3 className='text-xl font-semibold text-blue-400'>💬 Social App</h3>
-        <p className='text-gray-300 mt-2'>
-          A full-stack social networking app built with React, TypeScript, React
-          Router, and Supabase. Features real-time updates and a responsive UI
-          for seamless interaction.
-        </p>
-        <ul className='list-disc list-inside text-gray-400 mt-2'>
-          <li>User authentication and profiles</li>
-          <li>Post creation and real-time comment threads</li>
-          <li>Dynamic routing and protected routes</li>
-        </ul>
-        <div className='mt-3'>
-          <a
-            href='https://github.com/BullDogPatch/social.app'
-            target='_blank'
-            className='text-blue-400 hover:underline'
-          >
-            View on GitHub
-          </a>{' '}
-          |
-          <a
-            href='https://social-app-neon-alpha.vercel.app/'
-            target='_blank'
-            className='text-blue-400 hover:underline ml-2'
-          >
-            Live Demo
-          </a>
-        </div>
-      </div>
+      ))}
 
       <h2 className='text-2xl font-semibold mt-8 mb-2'>
         Fun Facts About Me 🎶
