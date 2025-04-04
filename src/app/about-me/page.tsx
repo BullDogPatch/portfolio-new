@@ -138,6 +138,37 @@ const AboutPage = () => {
         </div>
       </div>
 
+      <div className='mt-6 bg-gray-800 p-6 rounded-lg shadow-lg'>
+        <h3 className='text-xl font-semibold text-blue-400'>💬 Social App</h3>
+        <p className='text-gray-300 mt-2'>
+          A full-stack social networking app built with React, TypeScript, React
+          Router, and Supabase. Features real-time updates and a responsive UI
+          for seamless interaction.
+        </p>
+        <ul className='list-disc list-inside text-gray-400 mt-2'>
+          <li>User authentication and profiles</li>
+          <li>Post creation and real-time comment threads</li>
+          <li>Dynamic routing and protected routes</li>
+        </ul>
+        <div className='mt-3'>
+          <a
+            href='https://github.com/BullDogPatch/social.app'
+            target='_blank'
+            className='text-blue-400 hover:underline'
+          >
+            View on GitHub
+          </a>{' '}
+          |
+          <a
+            href='https://social-app-neon-alpha.vercel.app/'
+            target='_blank'
+            className='text-blue-400 hover:underline ml-2'
+          >
+            Live Demo
+          </a>
+        </div>
+      </div>
+
       <h2 className='text-2xl font-semibold mt-8 mb-2'>
         Fun Facts About Me 🎶
       </h2>
