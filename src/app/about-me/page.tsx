@@ -91,7 +91,7 @@ const AboutPage = () => {
       ))}
 
       <h2 className='text-2xl font-semibold mt-8 mb-2'>
-        Fun Facts About Me 🎶
+        Fun Facts About Me <span className='inline-block jingle'>🎶</span>
       </h2>
       <ul className='list-disc list-inside text-gray-300 mb-6'>
         <li className='text-gray-800 dark:text-gray-300'>
