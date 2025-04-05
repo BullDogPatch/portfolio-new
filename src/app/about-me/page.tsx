@@ -13,7 +13,7 @@ const AboutPage = () => {
       <h1 className='text-4xl font-bold text-center mb-6'>About Me</h1>
 
       <h2 className='text-2xl font-semibold mb-2'>
-        Hi, I&apos;m Craig Clayton 👋
+        Hi, I&apos;m Craig Clayton <span className='wave'>👋</span>
       </h2>
       <p className='text-gray-800 leading-relaxed mb-6 dark:text-gray-300'>
         I&apos;m a passionate{' '}
@@ -27,7 +27,9 @@ const AboutPage = () => {
         smooth, engaging applications.
       </p>
 
-      <h2 className='text-2xl font-semibold mb-2'>My Developer Journey 🚀</h2>
+      <h2 className='text-2xl font-semibold mb-2'>
+        My Developer Journey <span className='spin'>🚀</span>
+      </h2>
       <p className='text-gray-800 leading-relaxed mb-6 dark:text-gray-300'>
         My coding journey started three years ago when I began teaching myself
         web development. Recently, I completed an intensive{' '}
@@ -41,7 +43,9 @@ const AboutPage = () => {
         for problem-solving and collaboration.
       </p>
 
-      <h2 className='text-2xl font-semibold mb-2'>What I Build 🛠️</h2>
+      <h2 className='text-2xl font-semibold mb-2'>
+        What I Build <span className='wave'>🛠️</span>
+      </h2>
 
       {projects.map((project) => (
         <div
