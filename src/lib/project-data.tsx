@@ -9,7 +9,20 @@ interface Project {
 
 export const projects: Project[] = [
   {
-    title: '🍪 Cookie Clicker Game',
+    title: '🍪 Cookie Clicker Game (Vanilla JS)',
+    description:
+      'A fun, interactive clicker game where users earn cookies and unlock upgrades. Built with just vanilla JavaSctipt',
+    tech: ['HTML', 'CSS', 'JavaScript'],
+    features: [
+      'Dynamic animations tied to clicks',
+      'Real-time updates with cookies per second calculation',
+      'Dark mode for a sleek UI',
+    ],
+    github: 'https://github.com/BullDogPatch/week3-assignment',
+    liveDemo: 'https://bulldogpatch.github.io/week3-assignment//',
+  },
+  {
+    title: '🍪 Cookie Clicker Game (React)',
     description:
       'A fun, interactive clicker game where users earn cookies and unlock upgrades.',
     tech: ['React', 'JavaScript', 'CSS'],
