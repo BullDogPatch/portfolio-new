@@ -61,17 +61,19 @@ export const projects: Project[] = [
     liveDemo: 'https://product-shop-mu.vercel.app',
   },
   {
-    title: '💬 Social App',
+    title: '✅ Task Tracker',
     description:
-      'A full-stack social networking app built with React, TypeScript, React Router, and Supabase. Features real-time updates and a responsive UI for seamless interaction.',
-    tech: ['React', 'TypeScript', 'React Router', 'Supabase'],
+      'A full-stack task management app built as part of a coding challenge.',
+    tech: ['React', 'TypeScript', 'React Router', 'Supabase', 'TanStack Query'],
     features: [
-      'User authentication and profiles',
-      'Post creation and real-time comment threads',
-      'Dynamic routing and protected routes',
+      'Create, view, update and delete tasks',
+      'Status management with dropdown (To Do, In Progress, Done)',
+      'Single task detail pages with status update support',
+      'Optimistic updates and cache management using Tanstack Query',
+      'Form validation and toast notifications',
     ],
-    github: 'https://github.com/BullDogPatch/social.app',
-    liveDemo: 'https://social-app-neon-alpha.vercel.app/',
+    github: 'https://github.com/BullDogPatch/techinal-test',
+    liveDemo: 'https://technical-test1.netlify.app/',
   },
 ];
 
