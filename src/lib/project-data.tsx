@@ -35,7 +35,7 @@ export const projects: Project[] = [
     liveDemo: 'https://week6-assignment-cia0.onrender.com/',
   },
   {
-    title: '🎸 Band Review App',
+    title: '🎸 Band Review App (Backend down at the moment)',
     description:
       'A platform where users share concert reviews, built with Next.js and Supabase.',
     tech: ['Next.js', 'Supabase', 'Tailwind CSS'],
